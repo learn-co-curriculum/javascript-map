@@ -101,8 +101,7 @@ We're using `Object.assign()` here to defensively copy the object and change its
 ## Seeing the light
 ![Praise the JS gods.](https://media.giphy.com/media/kkpWcU9XgFIUE/giphy.gif)
 
-Time for a confession. We basically just implemented something that is already part of the JS standard library. Sisyphus
-has nothing on us! To map elements in an array, we can simply use `Array.prototype.map()`.
+Time for a confession. We basically just implemented something that is already part of the JS standard library. Sisyphus has nothing on us! To map elements in an array, we can simply use `Array.prototype.map()`.
 
 Much like our own `map()` function, `Array.prototype.map()` is an array method that iterates over all elements, allowing you to apply a function to each element in that array, effectively transforming them into something else. The result is then returned as a *new* array, leaving the original array intact and unmodified (but remember, **not** the elements we modify, necessitating the need for defensive copying). That last part is super important, because it either saves us from having to create a new array ourselves and copy stuff in there, **or** modifying the original elements in the array — much like what we did in our own `map()` function.
 
